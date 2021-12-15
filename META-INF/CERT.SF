@@ -1,0 +1,94 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+SHA1-Digest-Manifest: iFToxLsGDjW775h/z/Sb+vkXf0w=
+
+Name: file_contexts
+SHA1-Digest-Manifest: ZElLs4WKK0hIKa2S8xJ97K1lIVU=
+
+Name: boot.img
+SHA1-Digest-Manifest: N3Tjg1XWs817ovlZ4Bi/51NU/eg=
+
+Name: sig/recovery.sig
+SHA1-Digest-Manifest: 5+pjwYwxYHQons59SItcIu3EZK0=
+
+Name: META-INF/build.prop
+SHA1-Digest-Manifest: NL4uc/BHE3eNlm+hfGtZmoYEBiw=
+
+Name: META-INF/sw_version
+SHA1-Digest-Manifest: 74h1y8LHCGLPcePIUbWH2ylBSBo=
+
+Name: logo.img
+SHA1-Digest-Manifest: uKmjNHazABfIkgb2bHiImVfTohA=
+
+Name: uboot.img
+SHA1-Digest-Manifest: x8TA82ybdWWbsY4x/xC0ZDkENuo=
+
+Name: META-INF/com/google/android/updater-script
+SHA1-Digest-Manifest: bQkhlBKV60+hmYpbQjRL99sZHwc=
+
+Name: type.txt
+SHA1-Digest-Manifest: DYaMDv2/K2hMysVcS9muDyJNPj4=
+
+Name: scatter.txt
+SHA1-Digest-Manifest: nYGLz6tEWX0fv2sQ1nIsrySdm/U=
+
+Name: SEC_VER.txt
+SHA1-Digest-Manifest: HaVKJpRUk1PvnOdECtCToW868ls=
+
+Name: system.new.dat
+SHA1-Digest-Manifest: yX+jCm4DUe5IT2dCxdV0n7+VFxY=
+
+Name: META-INF/imei.dat
+SHA1-Digest-Manifest: eWk6q24Ur0D2d8+JIaRVUTjyAQA=
+
+Name: META-INF/machine_match
+SHA1-Digest-Manifest: 1Wfe0YhofsOofG2NKOyKUQ3fi5k=
+
+Name: custom/3rd-party/apk/DataMigration/DataMigration.apk
+SHA1-Digest-Manifest: FMnrlALj0a/7a+wFLNxtDjWSyQo=
+
+Name: data/app/DataMigration.apk
+SHA1-Digest-Manifest: h+FZQxAT11H0kHCofK+CbgrvgzU=
+
+Name: META-INF/com/google/android/update-binary
+SHA1-Digest-Manifest: Uu0ARr5HadAzSFDqp02VNrutxRU=
+
+Name: system.transfer.list
+SHA1-Digest-Manifest: VXGd2O9MsHWMTMcDd2s9WszXQeA=
+
+Name: preloader.img
+SHA1-Digest-Manifest: 6Lzg7MyGz0uttoMa9wISd50t/Sk=
+
+Name: custom/cip-build.prop
+SHA1-Digest-Manifest: fiRJ66V9nVxbQ8t+SqoMx4L9/g8=
+
+Name: custom/app/Gba/Gba.apk
+SHA1-Digest-Manifest: MY+57xJr9dIdjuWGA2kiFQTnrbQ=
+
+Name: system.patch.dat
+SHA1-Digest-Manifest: 774VWw1Wa8Y+IPKHHCeM6N//yzE=
+
+Name: mobicore.bin
+SHA1-Digest-Manifest: I+1n1BUSqFkk718qmrbw59w9k6A=
+
+Name: META-INF/com/android/metadata
+SHA1-Digest-Manifest: 8OIaytmAPJO8O19YHQsdl4q26fg=
+
+Name: META-INF/com/android/otacert
+SHA1-Digest-Manifest: D4nYxFLNSbxFs6aDV20TWgpZWg8=
+
+Name: custom/plugin/FwkPlugin/FwkPlugin.mpinfo
+SHA1-Digest-Manifest: jyctvy6IVLsx08sNGTnLXK5IuB8=
+
+Name: custom/plugin/FwkPlugin/FwkPlugin.apk
+SHA1-Digest-Manifest: xf5MM6+GQv/TKfFbJRpSSxdITHI=
+
+Name: custom/plugin/Signatures/mplugin_guard.xml
+SHA1-Digest-Manifest: cAgXTF6XJ5D8gCkhU2qViRsZymg=
+
+Name: custom/3rd-party/apk/SkinPackOEMMeiZu/SkinPackOEMMeiZu.apk
+SHA1-Digest-Manifest: dVPL/7n9V1MjPO6h3oMw4KS63C8=
+
+Name: custom/3rd-party/apk/TouchPal/TouchPal.apk
+SHA1-Digest-Manifest: OL7DhemiT6UfCdRwUn3EtD/jLXs=
+

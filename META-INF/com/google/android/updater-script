@@ -1,0 +1,46 @@
+package_extract_file("META-INF/machine_match", "/tmp/machine_match");
+set_perm(0, 0, 0755, "/tmp/machine_match");
+package_extract_file("META-INF/imei.dat", "/tmp/imei.dat");
+if (run_program("/tmp/machine_match", "/tmp/imei.dat") != "0") then
+    ui_print("machine not match");
+    delete(/tmp/imei.dat);
+    abort();
+endif;
+delete(/tmp/imei.dat);
+delete_recursive("/cache/backup");
+show_progress(0.650000, 0);
+ui_print("Patching system image unconditionally...");
+block_image_update("system", package_extract_file("system.transfer.list"), "system.new.dat", "system.patch.dat");
+ui_print("update system done!");
+mount("ext4", "EMMC", "/dev/block/platform/mtk-msdc.0/by-name/custom", "/custom");
+if (access("/custom/simlock.key") != "0") then
+unmount("/custom");
+format("ext4", "EMMC", "/dev/block/platform/mtk-msdc.0/by-name/custom", "0", "/custom");
+mount("ext4", "EMMC", "/dev/block/platform/mtk-msdc.0/by-name/custom", "/custom");
+endif;
+delete_recursive("/custom/3rd-party");
+package_extract_dir("custom", "/custom");
+set_metadata_recursive("/custom", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:custom_file:s0");
+ui_print("update custom done!");
+if (getprop("ro.meizu.has_datamigration_app") != "true") then
+package_extract_file("data/app/DataMigration.apk", "/data/app/DataMigration.apk");
+set_metadata("/data/app/DataMigration.apk", "uid", 1000, "gid", 1000, "mode", 0644, "capabilities", 0, "selabel", "u:object_r:system_data_file:s0");
+endif;
+delete("/data/nvram/APCFG/APRDCL/MD_Type");
+assert(package_extract_file("logo.img", "/tmp/logo.img"),
+       write_raw_image("/tmp/logo.img", "logo"),
+       delete("/tmp/logo.img"));
+assert(package_extract_file("preloader.img", "/tmp/preloader.img"),
+       write_raw_image("/tmp/preloader.img", "preloader"),
+       delete("/tmp/preloader.img"));
+assert(package_extract_file("uboot.img", "/tmp/uboot.img"),
+       write_raw_image("/tmp/uboot.img", "uboot"),
+       delete("/tmp/uboot.img"));
+assert(package_extract_file("boot.img", "/tmp/boot.img"),
+       write_raw_image("/tmp/boot.img", "bootimg"),
+       delete("/tmp/boot.img"));
+assert(package_extract_file("mobicore.bin", "/tmp/tee1.img"),
+       write_raw_image("/tmp/tee1.img", "tee1"),
+       delete("/tmp/tee1.img"));
+set_progress(1.000000);
+unmount("/custom");
